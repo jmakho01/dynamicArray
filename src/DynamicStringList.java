@@ -1,17 +1,20 @@
 public class DynamicStringList implements StringList {
     private String[] theStrings;
     private int capacity;
+    private int size;
 
     public DynamicStringList()
     {
         this.theStrings = new String[10];
         this.capacity = 10;
+        this.size = 0;
     }
 
     public DynamicStringList(int num)
     {
         this.capacity = num;
         this.theStrings = new String[num];
+        this.size = 0;
     }
 
     /**
@@ -46,7 +49,7 @@ public class DynamicStringList implements StringList {
     */
     public void add(String value)
     {
-        
+        size++;
     }
 
     /**
@@ -58,6 +61,7 @@ public class DynamicStringList implements StringList {
     */
     public String remove(int index)
     {
+        size--;
         return "test";
     }
 
@@ -66,9 +70,8 @@ public class DynamicStringList implements StringList {
     *
     * @return the size of the list.
     */
-    public int size()
-    {
-        return -1;
+    public int size() {
+        return size;
     }
 
     /**
