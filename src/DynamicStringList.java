@@ -50,7 +50,9 @@ public class DynamicStringList implements StringList {
     */
     public void add(String value)
     {
+        theStrings[size] = value;
         size++;
+        capacity++;
     }
 
     /**
@@ -70,6 +72,7 @@ public class DynamicStringList implements StringList {
       
         theStrings[size - 1] = null;
         size--;
+        capacity--;
         return removedString;
     }
 
@@ -78,7 +81,8 @@ public class DynamicStringList implements StringList {
     *
     * @return the size of the list.
     */
-    public int size() {
+    public int size() 
+    {
         return size;
     }
 
@@ -87,7 +91,7 @@ public class DynamicStringList implements StringList {
     *
     * @return the capacity of the list.
     */
-    public int capacity()
+    public int capacity() 
     {
         return capacity;
     }
