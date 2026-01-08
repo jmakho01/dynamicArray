@@ -4,8 +4,7 @@ import org.junit.Test;
 
 public class DSLTests {
 
-    @Test
-    void testGet() {
+    @Test public void testGet() {
         DynamicStringList list1 = new DynamicStringList();
         list1.add("Testing");
         list1.add("Testing");
@@ -18,8 +17,7 @@ public class DSLTests {
         assertEquals("thing", list1.get(4));
     }
 
-    @Test
-    void testSize() {
+    @Test public void testSize() {
         DynamicStringList list1 = new DynamicStringList();
         list1.add("Hello");
         list1.add("World");
@@ -28,8 +26,7 @@ public class DSLTests {
         assertEquals(3, list1.size());
     }
 
-    @Test
-    void testSet() {
+    @Test public void testSet() {
         DynamicStringList list1 = new DynamicStringList();
         list1.add("Testing");
         list1.add("Testing");
@@ -44,8 +41,7 @@ public class DSLTests {
         assertEquals("working", list1.get(5));
     }
 
-    @Test 
-    void testRemove() {
+    @Test public void testRemove() {
         DynamicStringList list1 = new DynamicStringList();
         list1.add("Testing");
         list1.add("Testing");
@@ -60,8 +56,7 @@ public class DSLTests {
         assertEquals(3, list1.size());
     }
 
-    @Test
-    void testCapacity() {
+    @Test public void testCapacity() {
         DynamicStringList list1 = new DynamicStringList();
         DynamicStringList list2 = new DynamicStringList(15);
 
