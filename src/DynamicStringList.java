@@ -39,7 +39,8 @@ public class DynamicStringList implements StringList {
     */
     public void set(int index, String value)
     {
-        
+        if(index < 0 || index >= size()) throw new IndexOutOfBoundsException();
+        theStrings[index] = value;
     }
 
     /**
