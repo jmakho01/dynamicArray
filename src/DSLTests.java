@@ -62,5 +62,13 @@ public class DSLTests {
 
         assertEquals(10, list1.capacity());
         assertEquals(15, list2.capacity());
+        list1.add("Testing");
+        list1.add("Testing");
+        list1.add("is");
+        list1.add("this");
+        list1.add("thing");
+        list1.add("on?");
+        assertEquals(4, list1.capacity());
+
     }
 }
