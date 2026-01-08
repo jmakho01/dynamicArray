@@ -52,7 +52,7 @@ public class DynamicStringList implements StringList {
     {
         theStrings[size] = value;
         size++;
-        capacity++;
+        capacity--;
     }
 
     /**
@@ -72,7 +72,7 @@ public class DynamicStringList implements StringList {
       
         theStrings[size - 1] = null;
         size--;
-        capacity--;
+        capacity++;
         return removedString;
     }
 
