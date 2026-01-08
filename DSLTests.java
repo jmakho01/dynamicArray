@@ -21,6 +21,11 @@ public class DSLTests {
 
     }
 
+    @Test
+    void testSet() {
+        
+    }
+
     @Test 
     void testRemove() {
 
@@ -28,6 +33,6 @@ public class DSLTests {
 
     @Test
     void testCapacity() {
-        
+
     }
 }
