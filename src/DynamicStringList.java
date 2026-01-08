@@ -78,6 +78,6 @@ public class DynamicStringList implements StringList {
     */
     public int capacity()
     {
-        return -1;
+        return capacity;
     }
 }
