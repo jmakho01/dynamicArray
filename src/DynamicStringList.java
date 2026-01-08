@@ -7,12 +7,14 @@ public class DynamicStringList implements StringList {
     {
         this.theStrings = new String[10];
         this.capacity = 10;
+        this.size = 0;
     }
 
     public DynamicStringList(int num)
     {
         this.capacity = num;
         this.theStrings = new String[num];
+        this.size = 0;
     }
 
     /**
@@ -37,7 +39,8 @@ public class DynamicStringList implements StringList {
     */
     public void set(int index, String value)
     {
-        
+        if(index < 0 || index >= size()) throw new IndexOutOfBoundsException();
+        theStrings[index] = value;
     }
 
     /**
@@ -47,7 +50,7 @@ public class DynamicStringList implements StringList {
     */
     public void add(String value)
     {
-        
+        size++;
     }
 
     /**
@@ -75,9 +78,8 @@ public class DynamicStringList implements StringList {
     *
     * @return the size of the list.
     */
-    public int size()
-    {
-        return -1;
+    public int size() {
+        return size;
     }
 
     /**
@@ -87,6 +89,6 @@ public class DynamicStringList implements StringList {
     */
     public int capacity()
     {
-        return -1;
+        return capacity;
     }
 }
