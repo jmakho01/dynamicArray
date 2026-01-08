@@ -1,4 +1,19 @@
 public class DynamicStringList implements StringList {
+    private String[] theStrings;
+    private int capacity;
+
+    public DynamicStringList()
+    {
+        this.theStrings = new String[10];
+        this.capacity = 10;
+    }
+
+    public DynamicStringList(int num)
+    {
+        this.capacity = num;
+        this.theStrings = new String[num];
+    }
+
     /**
     * Retrieves the string at the specified index in the list.
     *
