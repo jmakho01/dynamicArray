@@ -1,6 +1,7 @@
 public class DynamicStringList implements StringList {
     private String[] theStrings;
     private int capacity;
+    private int size;
 
     public DynamicStringList()
     {
@@ -24,7 +25,7 @@ public class DynamicStringList implements StringList {
     public String get(int index)
     {
         if(index < 0 || index >= size()) throw new IndexOutOfBoundsException();
-        return "test";
+        return theStrings[index];
     }
 
     /**
@@ -58,7 +59,15 @@ public class DynamicStringList implements StringList {
     */
     public String remove(int index)
     {
-        return "test";
+        if (index < 0 || index >= size) throw new IndexOutOfBoundsException();
+      
+        String removedString = theStrings[index];
+      
+        for(int j = index; j < size - 1; j++) { theStrings[index] = theStrings[index + 1]; }
+      
+        theStrings[size - 1] = null;
+        size--;
+        return removedString;
     }
 
     /**
